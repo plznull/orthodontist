@@ -1,0 +1,70 @@
+# invoke rewrite engine
+RewriteEngine On
+RewriteBase /
+
+Options -Indexes
+<IfModule mod_negotiation.c>
+	Options -MultiViews
+</IfModule>
+
+# Redirect to www
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# redirect all extension to html
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.shtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.phtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.htm$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.php$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.aspx$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.asp$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.jsp$ $1.html [L,NC,R=301]
+
+RewriteRule ^index.html$ / [L,R=301]
+RewriteCond %{QUERY_STRING} ^option\=com_content&task\=view&id\=1&Itemid\=2$
+RewriteRule ^index\.php[/]? index_option_com_content_task_view_id_1_Itemid_2.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&func\=orth_viewcategories&Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_content&task\=view&id\=10&Itemid\=22$
+RewriteRule ^index\.php[/]? index_option_com_content_task_view_id_10_Itemid_22.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_content&amp;task\=view&amp;id\=6&amp;Itemid\=6$
+RewriteRule ^index\.php[/]? index_option_com_content_task_view_id_6_Itemid_6.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_content&amp;task\=view&amp;id\=2&amp;Itemid\=3$
+RewriteRule ^index\.php[/]? index_option_com_content_task_view_id_2_Itemid_3.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=7&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_7_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=19&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_19_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=44&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_44_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=55&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_55_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=72&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_72_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=93&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_93_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=114&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_114_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=130&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_130_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=153&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_153_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=169&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_169_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=181&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_181_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_datsogallery&amp;func\=orth_viewcategories&amp;catid\=194&amp;Itemid\=0$
+RewriteRule ^index\.php[/]? index_option_com_datsogallery_func_orth_viewcategories_catid_194_Itemid_0.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_content&amp;task\=view&amp;id\=10&amp;Itemid\=20$
+RewriteRule ^index\.php[/]? index_option_com_content_task_view_id_10_Itemid_20.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_content&amp;task\=view&amp;id\=8&amp;Itemid\=19$
+RewriteRule ^index\.php[/]? index_option_com_content_task_view_id_8_Itemid_19.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^option\=com_content&amp;task\=view&amp;id\=9&amp;Itemid\=21$
+RewriteRule ^index\.php[/]? index_option_com_content_task_view_id_9_Itemid_21.html? [R=301,L]
